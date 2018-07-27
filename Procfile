@@ -1,2 +1,2 @@
-web: node ./readable/src/app.js
+web: npm start ./readable
 api: node ./api-server/server.js
