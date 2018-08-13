@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
-import './index.css';
+import './App.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -20,15 +20,12 @@ import store from './store/store';
 
 ReactDOM.render(
   <MuiThemeProvider>
-  <Provider store={store}>
-  <BrowserRouter>
-    <Route
-      path="/"
-      name="Home"
-      component={App}
-    />
-  </BrowserRouter>
-  </Provider>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Route path="/" name="Home" component={App} />
+      </BrowserRouter>
+    </Provider>
   </MuiThemeProvider>,
-  document.getElementById('root'));
-  registerServiceWorker();
+  document.getElementById('root'),
+);
+registerServiceWorker();
